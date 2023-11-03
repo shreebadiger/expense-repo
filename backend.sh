@@ -22,7 +22,7 @@ echo $?
 
 
 echo -e "${color} Deleting old application content \e[0m"
-mkdir /app/* &>>log_file
+rm -rf /app/* &>>log_file
 echo $?
 
 echo -e "${color} Downloading and extracting dependencies for nodejs \e[0m"
