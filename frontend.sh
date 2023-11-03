@@ -2,7 +2,7 @@ color="\e[33m"
 log_file=&>>/tmp/expense.log
 
 echo -e "${color} Installing nginx \e[0m"
-dnf install nginx -y &>>&>>/tmp/expense.log
+dnf install nginx -y &>>/tmp/expense.log
 
 echo -e "${color} Replacing nginx default page \e[0m"
 cp expense.conf /etc/nginx/default.d/expense.conf &>>/tmp/expense.log
