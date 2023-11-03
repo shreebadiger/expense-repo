@@ -26,7 +26,7 @@ else
 echo -e "\e[33m Failure \e[0m"
 fi
 
-id userexpense &>>log_file
+id expense &>>log_file
 if [ $? -ne 0 ]; then
 echo -e "${color} Creating application user \e[0m"
 useradd expense &>>log_file
