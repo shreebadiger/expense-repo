@@ -9,8 +9,8 @@ echo -e "\e[33m Installing mysql-community-server\e[0m"
 dnf install mysql-community-server -y &>>/tmp/expense.log
 
 echo -e "\e[33m Starting mysql-community-server\e[0m"
-systemctl enable mysql &>>/tmp/expense.log
-systemctl start mysql &>>/tmp/expense.log
+systemctl enable mysqld &>>/tmp/expense.log
+systemctl start mysqld &>>/tmp/expense.log
 
 echo -e "\e[33m Setting password to mysql-community-server\e[0m"
 mysql_secure_installation --set-root-pass ExpenseApp@1 &>>/tmp/expense.log
