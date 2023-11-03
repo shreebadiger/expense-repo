@@ -1,0 +1,1 @@
+echo -e "\e[33m this is in blue colour \e[Om"
