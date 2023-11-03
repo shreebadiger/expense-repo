@@ -20,6 +20,11 @@ echo -e "${color} Creating a directory to run the app \e[0m"
 mkdir /app &>>log_file
 echo $?
 
+
+echo -e "${color} Deleting old application content \e[0m"
+mkdir /app/* &>>log_file
+echo $?
+
 echo -e "${color} Downloading and extracting dependencies for nodejs \e[0m"
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>>log_file
 cd /app &>>/tmp/expense.log
