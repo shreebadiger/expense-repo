@@ -46,6 +46,7 @@ echo -e "\e[33m success \e[0m"
 else
 echo -e "\e[33m Failure \e[0m"
 fi
+fi
 
 echo -e "${color} Deleting old application content \e[0m"
 rm -rf /app/* &>>log_file
