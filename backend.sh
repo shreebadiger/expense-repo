@@ -1,18 +1,18 @@
-echo -e "\e[31m Disabling Nodejs and installing Newer version \e[Om"
+echo -e "\e[31m Disabling Nodejs and installing Newer version \e[0m"
 dnf module disable nodejs -y
 dnf module enable nodejs:18 -y
 dnf install nodejs -y
 
-echo -e "\e[31m Enabling systemd service \e[Om"
+echo -e "\e[31m Enabling systemd service \e[0m"
 cp backend.service /etc/systemd/system/backend.service
 
 echo -e "\e[33m Creating user \e[Om"
 useradd expense
 
-echo -e "\e[34m Creating a directory to run the app \e[Om"
+echo -e "\e[34m Creating a directory to run the app \e[0m"
 mkdir /app 
 
-echo -e "\e[35m Downloading and extracting dependencies for nodejs \e[Om"
+echo -e "\e[35m Downloading and extracting dependencies for nodejs \e[0m"
 curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip 
 cd /app 
 unzip /tmp/backend.zip
